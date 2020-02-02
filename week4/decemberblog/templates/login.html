@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Login</h1>
+
+<form action="" method="POST">
+    <fieldset>
+        {{ loginform.email.label }}
+        {{ loginform.email(class="form-control") }}
+    </fieldset>
+    <fieldset>
+        {{ loginform.password.label }}
+        {{ loginform.password(class="form-control") }}
+    </fieldset>
+    {{ loginform.submit(class="button") }}
+</form>
+{% endblock content%}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Signup For Our Blog NewsLetter</h1>
+
+<h2>Signup</h2>
+<form action="" method="POST">
+    {{ signupform.hidden_tag() }}
+    <div>
+        <fieldset>
+            {{ signupform.username.label }}
+            {{ signupform.username(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ signupform.email.label }}
+            {{ signupform.email(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{signupform.password.label }}
+            {{signupform.password(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ signupform.confirm_pass.label }}
+            {{ signupform.confirm_pass(class="form-control") }}
+        </fieldset>
+        {{signupform.submit(class="button") }}
+    </div>
+</form>
+
+{% endblock content %}

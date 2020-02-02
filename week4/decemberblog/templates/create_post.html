@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Create A Post!</h1>
+
+<div>
+    <form action="" method= "POST">
+        <fieldset>
+            {{ postform.title.label }}
+            {{ postform.title(class="form-control")}}
+        </fieldset>
+        <fieldset>
+            {{ postform.content.label }}
+            {{ postform.content(class="form-control")}}
+        </fieldset>
+        {{ postform.submit(class="button")}}
+    </form>
+</div>
+
+{% endblock content %}
